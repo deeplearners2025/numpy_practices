@@ -38,8 +38,15 @@ a4 = np.array([[2],[0]])
 print("a4.shape: ",a4.shape)
 print(np.matmul(a3,a4))
 
+# This will raise an error because m1 != n2, i.e., 4 != 2
 A = np.random.rand(3, 4)
 print(A)
 B = np.random.rand(2, 5)
 print(B)
-np.matmul(A, B)  # This will raise an error because m1 != n2, i.e., 4 != 2
+# np.matmul(A, B)  #error
+print(10*"+-*-+","\r\n")
+
+#Random Numbers
+print(np.random.rand(2, 3))
+print(np.random.randn(3, 3))
+print(np.random.randint(0, 100, size=(3, 2)))
