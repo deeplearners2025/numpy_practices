@@ -32,10 +32,29 @@ vect_testFn = np.vectorize(custom_fn)
 a = np.array([[1],[2],[3]])
 b = np.array([[4],[5],[6]])
 c = np.array([[7],[8],[9]])
+print("a:",a)
+print("Shape:",a.shape)
 print(vect_testFn(a,b,c))
+print("Another example below : ")
 
 a = np.array([1,2,3])
 b = np.array([4,5,6])
 c = np.array([7,8,9])
+print("Shape:",a.shape)
 print(vect_testFn(a,b,c))
+print(10*"+-*-+","\r\n")
+
+
+# Masking with NaN and Filtering
+a = np.array([1,2, np.nan, 4])
+print("a:",a)
+print("np.isnan(a): ", np.isnan(a))
+print("a[np.isnan(a)]:", a[np.isnan(a)])
+print("a[~np.isnan(a)]:", a[~np.isnan(a)])
+a[a==np.nan] = 10 #replacing nan with some value, though this doesnt work
+a[np.isnan(a)] = 10 # this works!
+print("a:",a)
+print("np.isnan(a): ", np.isnan(a))
+print("a[np.isnan(a)]:", a[np.isnan(a)])
+print("a[~np.isnan(a)]:", a[~np.isnan(a)])
 
