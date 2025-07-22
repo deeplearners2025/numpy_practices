@@ -18,4 +18,8 @@ print(arr1)
 print(arr1.T)
 print(np.hstack((arr1.T,arr2.T)))
 # print(np.hstack((arr1,arr2))) #ValueError: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 2 and the array at index 1 has size 1
+print(10*"+-*-+","\r\n")
 
+# Split Arrays
+arrSplit = np.array([11,12,13,14,15,16,17,18,19])
+print(np.split(arrSplit,3))
