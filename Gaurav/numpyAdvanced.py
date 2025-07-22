@@ -21,3 +21,21 @@ A = np.array([[2, 1], [1, 3]])
 B = np.array([5, 6])
 x = np.linalg.solve(A, B)
 print(x)
+print(10*"+-*-+","\r\n")
+
+#Apply Custom Function with vectorize
+
+def custom_fn(x,y,z):
+    return x**2 + y*2 + z
+
+vect_testFn = np.vectorize(custom_fn)
+a = np.array([[1],[2],[3]])
+b = np.array([[4],[5],[6]])
+c = np.array([[7],[8],[9]])
+print(vect_testFn(a,b,c))
+
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+c = np.array([7,8,9])
+print(vect_testFn(a,b,c))
+
